@@ -1,5 +1,13 @@
 <div class="container">
   <div class="jumbotron">
-    <button (click)= type="button" name="edit">Edit this recipie</button>
+    <button (click)="editRecipe()" type="button" name="edit">Edit this recipie</button>
+    <div id="edit" *ngIf="display">
+      <textarea name="title" rows="1" cols="30" [value]="recipeToEdit.title"></textarea>
+      <ul *ngFor="let ingredient of recipeToEdit.ingredients">
+        <li>
+          <textarea name="title" rows="1" cols="30" [value]="ingredient"></textarea>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
