@@ -6,13 +6,14 @@
       <ul id="detail" *ngIf="display">
         <img [src]="recipe.image" alt="">
         <p><strong>Ingredients:</strong></p>
-        <ol *ngFor="let ingredient of recipe.ingredients">
+        <ul *ngFor="let ingredient of recipe.ingredients">
           <li>
             {{ ingredient }}
           </li>
-        </ol><br>
+        </ul><br>
         <p><strong>Direction: </strong></p>
         <p>{{ recipe.direction }}</p>
+        <edit-info [recipeToEdit]="recipe"></edit-info>
       </ul>
     </li>
   </div>
