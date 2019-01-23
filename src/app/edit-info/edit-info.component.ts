@@ -6,8 +6,12 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./edit-info.component.css']
 })
 export class EditInfoComponent implements OnInit {
+  display:boolean=false;
+  @Input() recipeToEdit: Recipe;
 
-@Input() recipeToEdit: Recipe;
 
+  editRecipe(){
+    this.display= !this.display;
 
+  }
 }
