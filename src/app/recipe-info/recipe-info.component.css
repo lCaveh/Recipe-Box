@@ -1,0 +1,7 @@
+li #recipeEntry {
+  display: block;
+}
+#recipeEntry img {
+  width: 25%;
+  float: right;
+}

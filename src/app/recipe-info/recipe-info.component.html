@@ -1,0 +1,19 @@
+
+<div class="container">
+  <div class="jumbotron">
+    <li id="recipeEntry" (click)="showRecipe()">
+      <h3>{{ recipe.title }}</h3>
+      <ul id="detail" *ngIf="display">
+        <img [src]="recipe.image" alt="">
+        <p><strong>Ingredients:</strong></p>
+        <ol *ngFor="let ingredient of recipe.ingredients">
+          <li>
+            {{ ingredient }}
+          </li>
+        </ol><br>
+        <p><strong>Direction: </strong></p>
+        <p>{{ recipe.direction }}</p>
+      </ul>
+    </li>
+  </div>
+</div>
