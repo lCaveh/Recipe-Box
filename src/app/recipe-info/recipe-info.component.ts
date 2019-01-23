@@ -13,6 +13,7 @@ export class RecipeInfoComponent {
 
   @Input() recipe: Recipe;
 
+
   showRecipe(){
     this.display = !this.display;
 }

@@ -16,4 +16,8 @@ export class EditInfoComponent {
     this.display= !this.display;
 
   }
+  setRecipe(){
+
+
+  }
 }

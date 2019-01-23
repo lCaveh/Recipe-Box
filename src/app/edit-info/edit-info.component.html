@@ -2,12 +2,16 @@
   <div class="jumbotron">
     <button (click)="editRecipe()" type="button" name="edit">Edit this recipie</button>
     <div id="edit" *ngIf="display">
-      <textarea name="title" rows="1" cols="30" [value]="recipeToEdit.title"></textarea>
-      <ul *ngFor="let ingredient of recipeToEdit.ingredients">
-        <li>
-          <textarea name="title" rows="1" cols="30" [value]="ingredient"></textarea>
-        </li>
-      </ul>
+      <form class="" action="index.html" method="post">
+        <input [(ngModel)]="recipeToEdit.title" [value]="recipeToEdit.title" type="text" name="title">
+        <ul *ngFor="let ingredient of recipeToEdit.ingredients; index as i">
+          <li>
+            <input [(ngModel)]="recipeToEdit.ingredients[i]"  type="text" name="ingredient">
+          </li>
+        </ul>
+        <textarea [(ngModel)]="recipeToEdit.direction" name="direction" rows="5" cols="80" [value]="recipeToEdit.direction"></textarea>
+        <button type="submit" name="button" *ngIf="display" (click)="setRecipe()">Done</button>
+      </form>
     </div>
   </div>
 </div>
